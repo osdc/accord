@@ -22,7 +22,3 @@ resource "discord_member_roles" "arvindpunk" {
     role_id = data.discord_role.sponsor.id
   }
 }
-
-output "user" {
-  value = data.discord_member.arvindpunk
-}
