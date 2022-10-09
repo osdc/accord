@@ -1,0 +1,26 @@
+name: Terraform Plan
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+env:
+  TF_VAR_DISCORD_SEVER_ID: ${{ secrets.TF_VAR_DISCORD_SERVER_ID }}
+  TF_VAR_DISCORD_TOKEN: ${{ secrets.TF_VAR_DISCORD_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: terraform-plan
+        uses: dflook/terraform-plan@v1.25.0
+
+
+
+
+
