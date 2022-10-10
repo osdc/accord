@@ -1,0 +1,23 @@
+name: Apply
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    name: Apply terraform
+    env:
+      TF_VAR_DISCORD_SERVER_ID: ${{ secrets.TF_VAR_DISCORD_SERVER_ID }}
+      TF_VAR_DISCORD_TOKEN: ${{ secrets.TF_VAR_DISCORD_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: terraform apply
+        uses: dflook/terraform-apply@v1
+        with:
+          auto_approve: true
