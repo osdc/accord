@@ -5,7 +5,7 @@
 #     server_id = data.discord_server.server.id
 #     user_id   = data.discord_member.<github-username>.id
 #     role {
-#       role_id = resource.discord_role.<role-name>.id
+#       role_id = data.discord_role.<role-name>.id
 #     }
 #     role {
 #       role_id = data.discord_role.<role-name>.id
