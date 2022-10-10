@@ -82,3 +82,11 @@ resource "discord_member_roles" "Shreyas220" {
     role_id = data.discord_role.sponsor.id
   }
 }
+
+resource "discord_member_roles" "Pimmy" {
+  server_id = data.discord_server.server.id
+  user_id   = data.discord_member.Pimmy.id
+  role {
+    role_id = data.discord_role.hacktoberfest.id
+  }
+}
