@@ -5,7 +5,7 @@
 #     server_id = data.discord_server.server.id
 #     user_id   = data.discord_member.<github-username>.id
 #     role {
-#       role_id = resource.discord_role.<role-name>.id
+#       role_id = data.discord_role.<role-name>.id
 #     }
 #     role {
 #       role_id = data.discord_role.<role-name>.id
@@ -83,12 +83,18 @@ resource "discord_member_roles" "Shreyas220" {
   }
 }
 
-resource "discord_member_roles" "WhiteWolf47" {
+resource "discord_member_roles" "Pimmy" {
   server_id = data.discord_server.server.id
-  user_id   = data.discord_member.WhiteWolf47.id
-
+  user_id   = data.discord_member.Pimmy.id
   role {
     role_id = data.discord_role.hacktoberfest.id
   }
 }
 
+resource "discord_member_roles" "WhiteWolf47" {
+  server_id = data.discord_server.server.id
+  user_id   = data.discord_member.WhiteWolf47.id
+  role {
+    role_id = data.discord_role.hacktoberfest.id
+  }
+}
