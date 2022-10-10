@@ -46,6 +46,9 @@ resource "discord_member_roles" "daemon1024" {
   role {
     role_id = data.discord_role.sponsor.id
   }
+  role {
+    role_id = data.discord_role.hacktoberfest.id
+  }
 }
 
 resource "discord_member_roles" "humancalico" {
