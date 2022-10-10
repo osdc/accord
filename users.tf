@@ -52,3 +52,8 @@ data "discord_member" "Pimmy" {
   server_id = data.discord_server.server.id
   user_id   = 637126184664301588
 }
+
+data "discord_member" "WhiteWolf47" {
+  server_id = data.discord_server.server.id
+  user_id   = 882965365276151828
+}
