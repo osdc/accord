@@ -1,4 +1,4 @@
-"data "discord_member" "ApplePie" {
+data "discord_member" "ApplePie" {
   server_id = data.discord_server.server.id
   user_id   = 713273948489515020
 }
