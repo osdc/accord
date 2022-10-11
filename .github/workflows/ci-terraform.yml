@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  TF_VAR_DISCORD_SEVER_ID: ${{ secrets.TF_VAR_DISCORD_SERVER_ID }}
+  TF_VAR_DISCORD_SERVER_ID: ${{ secrets.TF_VAR_DISCORD_SERVER_ID }}
   TF_VAR_DISCORD_TOKEN: ${{ secrets.TF_VAR_DISCORD_TOKEN }}
 
 jobs:
