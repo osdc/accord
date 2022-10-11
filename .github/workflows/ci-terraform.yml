@@ -19,3 +19,5 @@ jobs:
       
       - name: terraform-plan
         uses: dflook/terraform-plan@v1.25.0
+        with:
+          add_github_comment: false
