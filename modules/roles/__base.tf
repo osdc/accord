@@ -12,22 +12,16 @@ variable "DISCORD_SERVER_ID" {
   description = "Discord server ID."
 }
 
-variable "DISCORD_TOKEN" {
-  type        = string
-  description = "The discord bot token."
-}
-
-provider "discord" {
-  token = var.DISCORD_TOKEN
-}
-
 data "discord_server" "server" {
   server_id = var.DISCORD_SERVER_ID
 }
 
-module "users" {
-  source = "./modules/users"
+# Define all roles as module outputs.
 
-  DISCORD_SERVER_ID = var.DISCORD_SERVER_ID
+output "hacktoberfest" {
+  value = data.discord_role.hacktoberfest
 }
 
+output "sponsor" {
+  value = data.discord_role.sponsor
+}

@@ -12,22 +12,12 @@ variable "DISCORD_SERVER_ID" {
   description = "Discord server ID."
 }
 
-variable "DISCORD_TOKEN" {
-  type        = string
-  description = "The discord bot token."
-}
-
-provider "discord" {
-  token = var.DISCORD_TOKEN
-}
-
 data "discord_server" "server" {
   server_id = var.DISCORD_SERVER_ID
 }
 
-module "users" {
-  source = "./modules/users"
+module "roles" {
+  source = "../roles"
 
   DISCORD_SERVER_ID = var.DISCORD_SERVER_ID
 }
-

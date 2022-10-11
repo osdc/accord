@@ -32,14 +32,6 @@ resource "discord_member_roles" "akshgpt7" {
   }
 }
 
-resource "discord_member_roles" "arvindpunk" {
-  server_id = data.discord_server.server.id
-  user_id   = data.discord_member.arvindpunk.id
-  role {
-    role_id = data.discord_role.sponsor.id
-  }
-}
-
 resource "discord_member_roles" "daemon1024" {
   server_id = data.discord_server.server.id
   user_id   = data.discord_member.daemon1024.id

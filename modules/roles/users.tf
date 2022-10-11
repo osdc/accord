@@ -18,11 +18,6 @@ data "discord_member" "akshgpt7" {
   user_id   = 593562524150923301
 }
 
-data "discord_member" "arvindpunk" {
-  server_id = data.discord_server.server.id
-  user_id   = 219439471991586816
-}
-
 data "discord_member" "daemon1024" {
   server_id = data.discord_server.server.id
   user_id   = 531516025233997835
