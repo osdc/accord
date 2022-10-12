@@ -5,7 +5,7 @@ data "discord_member" "Monkey7" {
 
 resource "discord_member_roles" "Monkey7" {
   server_id = data.discord_server.server.id
-  user_id   = data.discord_member.Monkey 7.id
+  user_id   = data.discord_member.Monkey7.id
   role {
     role_id = module.roles.hacktoberfest.id
   }
