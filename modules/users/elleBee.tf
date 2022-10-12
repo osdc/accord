@@ -7,6 +7,6 @@ resource "discord_member_roles" "elleBee" {
   server_id = data.discord_server.server.id
   user_id   = data.discord_member.elleBee.id
   role {
-    role_id = module.roles.sponsor.id
+    role_id = module.roles.hacktoberfest.id
   }
 }
