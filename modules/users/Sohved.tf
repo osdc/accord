@@ -9,4 +9,5 @@ resource "discord_member_roles" "SohvedKuks" {
   role {
     role_id = module.roles.hacktoberfest.id
   }
+}
 
