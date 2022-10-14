@@ -1,6 +1,6 @@
 data "discord_member" "sanvi0sh" {
   server_id = data.discord_server.server.id
-  user_id   = 219439471991586816
+  user_id   = 1014445301530120192
 }
 
 resource "discord_member_roles" "sanvi0sh" {
