@@ -90,3 +90,11 @@ resource "discord_member_roles" "WhiteWolf47" {
     role_id = data.discord_role.hacktoberfest.id
   }
 }
+
+resource "discord_member_roles" "lonewolf1503" {
+  server_id = data.discord_server.server.id
+  user_id   = data.discord_member.lonewolf1503.id
+  role {
+    role_id = data.discord_role.hacktoberfest.id
+  }
+}
